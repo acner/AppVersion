@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="respuestaFinal">
+    <DisplayName>respuestaFinal</DisplayName>
+    <Properties/>
+    <Set>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">{"status":"OK",
+        "actualizar":@actualizar#,
+        "ultima_version":"@version_number#",
+        "url_playstore":"https://play.google.com/store/apps/details?id=@output.package#&amp;hl=es"
+        }</Payload>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="response"/>
+</AssignMessage>

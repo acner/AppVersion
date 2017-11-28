@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Variables-1">
+    <DisplayName>Extract Variables-1</DisplayName>
+    <Properties/>
+    <QueryParam name="id">
+        <Pattern ignoreCase="true">{package}</Pattern>
+    </QueryParam>
+    <QueryParam name="version">
+        <Pattern ignoreCase="true">{current_version}</Pattern>
+    </QueryParam>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <Source clearPayload="false">request</Source>
+    <VariablePrefix>output</VariablePrefix>
+</ExtractVariables>
