@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="extractAppStore">
+    <DisplayName>extractAppStore</DisplayName>
+    <Properties/>
+    <IncludeURL>jsc://versionCompare.js</IncludeURL>
+    <ResourceURL>jsc://extractAppstore.js</ResourceURL>
+</Javascript>
