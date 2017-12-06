@@ -8,6 +8,9 @@
     <QueryParam name="version">
         <Pattern ignoreCase="true">{current_version}</Pattern>
     </QueryParam>
+    <URIPath>
+        <Pattern ignoreCase="true">/{dispositivo}</Pattern>
+    </URIPath>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
     <Source clearPayload="false">request</Source>
     <VariablePrefix>output</VariablePrefix>

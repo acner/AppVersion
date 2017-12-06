@@ -3,7 +3,14 @@
     <Description/>
     <FaultRules/>
     <PreFlow name="PreFlow">
-        <Request/>
+        <Request>
+            <Step>
+                <Name>removeDispositivo</Name>
+            </Step>
+            <Step>
+                <Name>SetendPointUrl</Name>
+            </Step>
+        </Request>
         <Response>
             <Step>
                 <Name>add-cors</Name>
@@ -14,7 +21,15 @@
         <Request/>
         <Response>
             <Step>
-                <Name>extract</Name>
+                <Name>extractPlayStore</Name>
+                <Condition>(proxy.pathsuffix MatchesPath "/android") and (request.verb = "GET") </Condition>
+            </Step>
+            <Step>
+                <Name>extractAppStore</Name>
+                <Condition>(proxy.pathsuffix MatchesPath "/ios") and (request.verb = "GET")</Condition>
+            </Step>
+            <Step>
+                <Name>removeDisposition</Name>
             </Step>
             <Step>
                 <Name>respuestaFinal</Name>
@@ -24,6 +39,6 @@
     <Flows/>
     <HTTPTargetConnection>
         <Properties/>
-        <URL>https://play.google.com/store/apps/details</URL>
+        <URL>http://</URL>
     </HTTPTargetConnection>
 </TargetEndpoint>

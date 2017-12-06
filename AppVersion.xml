@@ -1,24 +1,31 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<APIProxy revision="3" name="AppVersion">
+<APIProxy revision="5" name="AppVersion">
     <Basepaths>/appversion</Basepaths>
     <ConfigurationVersion majorVersion="4" minorVersion="0"/>
-    <CreatedAt>1511900856827</CreatedAt>
+    <CreatedAt>1512589949337</CreatedAt>
     <CreatedBy>acner@elyon.com.py</CreatedBy>
     <Description>Get App Version api, and update in play store</Description>
     <DisplayName>AppVersion</DisplayName>
-    <LastModifiedAt>1511906240131</LastModifiedAt>
+    <LastModifiedAt>1512593369269</LastModifiedAt>
     <LastModifiedBy>acner@elyon.com.py</LastModifiedBy>
     <Policies>
         <Policy>Extract-Variables-1</Policy>
+        <Policy>SetendPointUrl</Policy>
         <Policy>add-cors</Policy>
-        <Policy>extract</Policy>
+        <Policy>extractAppStore</Policy>
+        <Policy>extractPlayStore</Policy>
+        <Policy>removeDisposition</Policy>
+        <Policy>removeDispositivo</Policy>
         <Policy>respuestaFinal</Policy>
     </Policies>
     <ProxyEndpoints>
         <ProxyEndpoint>default</ProxyEndpoint>
     </ProxyEndpoints>
     <Resources>
-        <Resource>jsc://extract.js</Resource>
+        <Resource>jsc://extractAppstore.js</Resource>
+        <Resource>jsc://extractPlayStore.js</Resource>
+        <Resource>jsc://setEndPointUrl.js</Resource>
+        <Resource>jsc://versionCompare.js</Resource>
     </Resources>
     <Spec></Spec>
     <TargetServers/>

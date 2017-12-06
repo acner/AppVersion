@@ -6,7 +6,7 @@
         <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">{"status":"OK",
         "actualizar":@actualizar#,
         "ultima_version":"@version_number#",
-        "url_playstore":"https://play.google.com/store/apps/details?id=@output.package#&amp;hl=es"
+        "url":"@url_detalle#"
         }</Payload>
     </Set>
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
